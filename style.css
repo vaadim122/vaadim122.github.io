@@ -71,17 +71,19 @@ header{
 }
 .header_menu_1_2 li{
 	padding-top: 50px;
-	margin-left: 10px;
+	
 }
 .header_menu_1_2 a{
 	padding-top: 47px;
-	margin-left: 40px;
+	margin-left: 35px;
+	margin-right: 15px; 
+
 }
 .header_menu_1_2 a:hover{
 	border-top: 3px solid #cbc8be;
 }
 .header_menu_1_3 li{
-	padding: 50px 0 0 18px;
+	padding: 50px 15px 0 0;
 
 }
 .header_menu_1_3 a{
@@ -99,12 +101,12 @@ header{
 	color: white;
 	font-size: 90px;
 	font-family: 'Yeseva One', cursive;
-	margin-top: 230px;
+	margin-top: 215px;
 	margin-bottom: 25px;
 }
 .header_section img {
 	float: both;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 .bg{
 	display: inline-block;
@@ -117,7 +119,7 @@ header{
 	font-family: 'Lato', sans-serif;
 	padding: 17px 50px;
 	margin-right:30px;
-	margin-bottom: 100px;
+	margin-bottom: 147px;
 }
 .bg:hover{
 	background-color: rgba(0, 0, 0, 0.9);
@@ -154,7 +156,7 @@ header{
 	float: left;
 	text-align: center;
 	width: 35%;
-	margin-left: 10px;
+	margin-left: 50px;
 }
 .contein_1 h2{
 	display: inline-block;
@@ -182,6 +184,7 @@ header{
 .contein_12 img {
 	float: right;
 	margin-top: 55px;
+	margin-bottom: 28px;
 	width: 50%
 	
 }
@@ -199,6 +202,7 @@ header{
 .section_two_one{
 	margin: 0 auto;
 	max-width: 1250px;
+	margin-right: 15px;
 }
 .contein_2{
 	position: relative;
@@ -348,17 +352,18 @@ p.contein_41{
 }
 .cont_5_imeg1{
 	float: left;
-	margin: 100px 25px 103px 25px;
+	margin: 100px 25px 100px 25px;
 }
 .cont_5_imeg2{
 	float: left;
-	margin: 100px 0 103px 0;
+	margin: 100px 0 100px 0;
 }
 .contein_5_1{
 	float: right;
-	margin-top: 95px;
+	margin-top: 99px;
 	text-align: center;
 	width: 430px;
+	margin-right: 15px;
 }
 .contein_5_1 h2{
 	color: #cc9900;
@@ -368,7 +373,7 @@ p.contein_41{
 	font-weight: normal;
 }
 .contein_5_1 img{
-	margin-top: 16px;
+	margin-top: 14px;
 	margin-bottom: 12px; 
 }
 .contein_5_1 p{
@@ -381,7 +386,7 @@ p.contein_41{
 }
 .booking{
 	/*text-align: left;*/
-	margin-top: 15px;
+	margin-top: 12px;
 }
 label{
 	float: left;
@@ -474,7 +479,7 @@ option {
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	height: 26px;
-	margin-top: 35px;
+	margin-top: 32px;
 	padding-top: 8px;
 	width: 198px;
 }
@@ -509,18 +514,19 @@ footer{
 }
 .footer_contein_3{
 	float: right;
+	margin-bottom: 65px;
 	width: 33%;
 }
 footer img{
 	margin-top: 15px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 footer h3{
 	display: inline-block;
 	font-size: 21px;
 	font-family: 'Yeseva One', cursive;
 	font-weight: normal;
-	margin-top: 55px;
+	margin-top: 60px;
 }
 footer p{
 	display: inline-block;
