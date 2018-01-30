@@ -15,7 +15,7 @@
 		margin-left: 10px;
 		margin-right: 15px;
 	}
-	.header_menu_1_3 li{
+	.menu__social li{
 		padding: 40px 15px 0 0;
 	}
 	.header_section p{
@@ -66,7 +66,7 @@
 		margin-left: 0;
 		margin-right: 12px;
 	}
-	.header_menu_1_3 li{
+	.menu__social li{
 		padding: 25px 5px 0 5px;
 	}
 	.header_section p{

@@ -82,11 +82,11 @@ header{
 .header_menu_1_2 a:hover{
 	border-top: 3px solid #cbc8be;
 }
-.header_menu_1_3 li{
+.menu__social li{
 	padding: 50px 15px 0 0;
 
 }
-.header_menu_1_3 a{
+.menu__social a{
 	color: #dab33e;
 }
 
