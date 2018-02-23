@@ -1,3 +1,25 @@
+.dws-progress-bar {
+color: #AD6E05;
+ margin: auto; 
+ z-index: 100;
+ font-size: 50px;
+font-family: 'Yeseva One', cursive;
+ text-align: center;
+}
+.dws-progress-bar img{
+	margin-left: 30px;
+	margin-top: 100px;
+	width: 20%;
+}
+#preloader {
+ position: fixed;
+ left: 0;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 100;
+ background: rgba(234,234,234,0.95);
+}
 *{
 	margin: 0;
 	padding: 0;
