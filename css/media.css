@@ -151,7 +151,7 @@
 		float: none;
 		margin: 0 auto;
 	}
-	.button_book a{
+	input[type="submit"]{
 		margin-bottom: 20px;
 	}
 	.contein_5_1 h2{

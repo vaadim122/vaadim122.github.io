@@ -18,7 +18,7 @@ font-family: 'Yeseva One', cursive;
  right: 0;
  bottom: 0;
  z-index: 100;
- background: rgba(234,234,234,0.95);
+ background: rgba(234,234,234,1);
 }
 *{
 	margin: 0;
@@ -492,20 +492,20 @@ option {
 	clear: both;
 	color: white;
 }
-.button_book a{
+input[type="submit"]{
 	border-width: 1px;
 	border-color: rgb(200, 159, 45);
 	border-style: solid;
 	background-color: rgba(200, 159, 45, 0.98);
+	color: white;
 	display: inline-block;
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
-	height: 26px;
+	height: 35px;
 	margin-top: 32px;
-	padding-top: 8px;
 	width: 198px;
 }
-.button_book a:hover{
+input[type="submit"]:hover{
 	border-color: rgba(200, 159, 45, 0.5);
 	background-color: rgba(200, 159, 45, 0.6);
 }
@@ -568,4 +568,7 @@ footer p{
 }
 .social_set li{
 	margin: 0 7px;
+}
+.popup{
+	display: none;
 }

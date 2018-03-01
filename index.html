@@ -157,12 +157,12 @@
 				<form class="booking">
 					<div class="form_name">
 						<label>Name</label><br>
-						<input type="text" name="name" placeholder="your name *">
-					</div>
+						<input type="text" name="name" placeholder="your name *" required>
+						</div>
 					<div class="form_email">
 						<label>Name</label><br>
-						<input type="text" name="email" placeholder="your email *">
-					</div>
+						<input type="email" name="email" placeholder="your email *" required>
+						</div>
 					<div class="form_date">
 						<label>Date</label><br>
 						<input type="date" placeholder="date *" required>
@@ -179,12 +179,15 @@
 							<option value="6">6</option>
 							<option value="7">7</option>
 						</select>
+						
 						<!-- <input type="text" name="party number"> -->
 					</div>
 					<div class="button_book">
-						<a href="#">Book now!</a>
+						<input class="button" type="submit"  rel="reg_form" value="Book now!"/>
+						<!-- <button>Book now!</button> -->
 					</div>
 				</form>
+				<div class="popup"></div>
 			</div>
 		</div>
 	</section>
@@ -230,5 +233,6 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/popup.js"></script>
 </body>
 </html>
