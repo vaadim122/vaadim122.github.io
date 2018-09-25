@@ -23,6 +23,6 @@ if(isset($_POST['submit'])){
 
 <!--Переадресация на главную страницу сайта, через 3 секунды-->
 <script language="JavaScript" type="text/javascript">
-    function changeurl(){eval(self.location="https://vaadim122.github.io/vad-code/");}
+    function changeurl(){eval(self.location="https://vaadim122.github.io/vad-code/index.html");}
     window.setTimeout("changeurl();",3000);
 </script>
