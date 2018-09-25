@@ -1,28 +1,32 @@
 <?php
-
-if(isset($_POST['submit'])){
-    $to = "pechenyuk.vadim@gmail.com";; // Здесь нужно написать e-mail, куда будут приходить письма
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $subject = "Форма отправки сообщений с сайта";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " оставил сообщение:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-
-    mail($to,$subject,$message,$headers);
-// mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender - Отключено!
-    echo "Сообщение отправлено. Спасибо Вам " . $first_name . ", мы скоро свяжемся с Вами.";
-    echo "<br /><br /><a href='https://vaadim122.github.io/vad-code/'>Вернуться на сайт.</a>";
-
+/**
+ *isset() - проверяет на наличие переменной/значения (равно NULL или нет)
+ *empty() - проверяет переменную на пустоту. Обращаю внимание, 0 - для нее тоже пустота!
+ **/
+if( isset($_POST['name'],$_POST['email'],$_POST['text']) ) {
+    $name = trim($_POST['name']); #убираем пробелы по краям, если они есть
+    $email = trim($_POST['email']); #убираем пробелы по краям, если они есть
+    $text = trim($_POST['message']); #убираем пробелы по краям, если они есть
+    if(empty($name) || empty($email) || empty($text)) { //если что то не ввели
+        echo 'Вы заполнили не все поля!';
+    }
+    else { //все поля заполнены, отправляем
+        $mailto = 'pechenyuk.vadim@gmail.com';
+        $subject = 'Сообщение с сайта';
+//формируем текст сообщения
+        $message  = 'Сообщение от пользователя <b>'.$name.'</b><br />';
+        $message .= 'E-mail пользователя: <a href="mailto:' . $email . '">' . $email . '</a><br />';
+        $message .= 'Текст сообщения:<br />' . $text;
+//формируем заголовки (кодировку только, остальное сами добавите по желанию)
+        $headers = 'Content-type: text/html; charset=windows-1251';
+//отправляем письмо
+        $mail = mail($mailto, $subject, $message, $headers);
+//проверяем отправку
+        if(TRUE === $mail) echo '<h2>Ваше сообщение успешно отправлено!</h2>';
+        else echo '<h2>Произошла ошибка при отправке сообщения.</h2>';
+//проверку можно записать короче при помощи тернарного оператора, вот так:
+//  echo (TRUE === $mail) ? 'Ваше сообщение успешно отправлено!' : 'Произошла ошибка при отправке сообщения.' ;
+//тогда нужно будет раскомментировать строчку выше и закомментировать строчки выше с проверкой
+    }
 }
-
 ?>
-
-<!--Переадресация на главную страницу сайта, через 3 секунды-->
-<script language="JavaScript" type="text/javascript">
-    function changeurl(){eval(self.location="https://vaadim122.github.io/vad-code/index.html");}
-    window.setTimeout("changeurl();",3000);
-</script>
