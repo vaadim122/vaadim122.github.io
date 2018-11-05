@@ -1,0 +1,15 @@
+@import "_mixins/font-face";
+
+$font-path: "../fonts/";
+
+@include font-face("HelveticaNeue", "HelveticaNeue", $font-path);
+@include font-face("HelveticaNeue-CondensedBlack", "HelveticaNeue-CondensedBlack", $font-path);
+@include font-face("HelveticaNeue-Light", "HelveticaNeue-Light", $font-path);
+@include font-face("latobold", "latobold", $font-path);
+@include font-face("latoregular", "latoregular", $font-path);
+
+$helveticaneue: 'HelveticaNeue', sans-serif;
+$helveticaneuec: 'HelveticaNeue-CondensedBlack', sans-serif;
+$helveticaneuel: 'HelveticaNeue-Light', sans-serif;
+$latobold: 'latobold', sans-serif;
+$latoregular: 'latoregular', sans-serif;

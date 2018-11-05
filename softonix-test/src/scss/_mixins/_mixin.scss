@@ -1,0 +1,11 @@
+@mixin text($font, $size, $color) {
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin color-block($color){
+  a{
+    background-color: $color;
+  }
+}
