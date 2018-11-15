@@ -1,0 +1,277 @@
+@import "vars";
+@import "_mixins/mixin";
+@import "_mixins/extend";
+@import "media";
+
+//block white with list
+.white-block {
+  @include max-width(1185px);
+  @extend %display-flex;
+  padding-bottom: 50px;
+  //media request
+  @media #{$standart}{
+    max-width: 960px;
+  }
+  @media #{$table}{
+    max-width: 760px;
+  }
+
+  .left-block-why {
+    flex: 1 0 65%;
+    padding: 55px 15px 10px;
+    //media request
+    @media #{$standart}{
+      flex: 1 0 70%;
+    }
+    @media #{$table}{
+      flex: 1 0 100%;
+    }
+    @media #{$mobile}{
+      padding: 35px 10px 15px;
+    }
+
+    .header-block {
+      border-left: 3px solid $left-border;
+      padding: 0 30px 0;
+      p {
+        @include text($montserratr, 12px, $color-light-blue);
+        text-transform: uppercase;
+        padding: 5px 0 2px;
+        margin-bottom: 0;
+        //media request
+        @media #{$mobile}{
+          font-size: 10px;
+        }
+      }
+      h2 {
+        @include text($montserratr, 34px, $color-list);
+        margin: 0;
+        padding-bottom: 10px;
+        //media request
+        @media #{$standart}{
+          font-size: 27px;
+        }
+        @media #{$mobile}{
+          font-size: 17px;
+        }
+      }
+    }
+
+    //block list
+    .block-list {
+      @extend %display-flex;
+      margin-top: 57px;
+      width: 100%;
+      //media request
+      @media #{$mobile}{
+        margin-top: 25px;
+      }
+
+      .left-list, .right-list {
+        flex: 1 0 50%;
+        //media request
+        @media #{$sx-mobile}{
+          flex: 1 0 100%;
+        }
+
+        ul {
+          padding-left: 39px;
+          //media request
+          @media #{$mobile}{
+            padding-left: 25px;
+          }
+
+          li {
+            @include text($montserratr, 18px, $color-list);
+            list-style-type: none;
+            position: relative;
+            line-height: 3.1;
+            &:before {
+              content: '\f058';
+              display: inline-block;
+              font-family: FontAwesome;
+              color: $list-marker;
+              line-height: 1;
+              font-size: 24px;
+              position: absolute;
+              top: 15px;
+              left: -32px;
+            }
+            //media request
+            @media #{$standart}{
+              font-size: 16px;
+              line-height: 2.8;
+              &:before {
+                top: 11px;
+              }
+            }
+            @media #{$mobile}{
+              font-size: 11px;
+              &:before {
+                font-size: 16px;
+                top: 7px;
+                left: -18px;
+              }
+            }
+            @media #{$sx-mobile}{
+              line-height: 2;
+            }
+          }
+        }
+      }
+
+      .right-list {
+        ul {
+          padding-left: 53px;
+          //media request
+          @media #{$mobile}{
+            padding-left: 25px;
+          }
+        }
+      }
+    }
+  }
+  .right-block-form {
+    flex: 1 0 27%;
+    background-color: $form-bg-color;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -100px;
+    //media request
+    @media #{$standart}{
+      flex: 1 0 30%;
+      margin-top: -85px;
+    }
+    @media #{$table}{
+      flex: 1 0 50%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    @media #{$mobile}{
+      max-width: 290px;
+    }
+    @media #{$sx-mobile}{
+      max-width: 250px;
+    }
+
+    // form contact us
+    form {
+      text-align: center;
+      h3 {
+        @include text($montserratr, 32px, $white);
+        background-image: linear-gradient(0deg, rgb(109, 163, 219) 0%, rgb(0, 108, 179) 100%);
+        width: 100%;
+        text-align: center;
+        margin: 0 0 63px;
+        padding: 32px 0;
+        //media request
+        @media #{$standart}{
+          padding: 25px 0;
+        }
+        @media #{$mobile}{
+          font-size: 18px;
+          padding: 20px 0;
+          margin: 0 0 40px;
+        }
+        @media #{$sx-mobile}{
+          font-size: 16px;
+          padding: 15px 0;
+          margin: 0 0 20px;
+        }
+
+      }
+      //input, textarea
+      input, textarea {
+        display: block;
+        margin: 17px auto;
+        height: 58px;
+        width: 255px;
+        border: none;
+        border-radius: 5px;
+        background-color: $input-color;
+        text-align: center;
+        padding: 0 15px;
+        @include text($montserratr, 15px, $color-list);
+        //media request
+        @media #{$mobile}{
+          height: 40px;
+          width: 220px;
+          font-size: 12px;
+        }
+        @media #{$sx-mobile}{
+          height: 35px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+      }
+      input::placeholder {
+        font-style: italic;
+        color: $input-plechol;
+        text-transform: uppercase;
+      }
+      textarea {
+        resize: none;
+        height: 150px;
+        padding: 10px;
+        //media request
+        @media #{$sx-mobile}{
+          height: 120px;
+        }
+
+      }
+      textarea::placeholder {
+        font-style: italic;
+        color: $input-plechol;
+        text-transform: uppercase;
+      }
+      //button
+      a {
+        display: inline-block;
+        background-color: $list-marker;
+        border-radius: 30px;
+        margin-top: 10px;
+        padding: 20px 65px;
+        @include text($montserratb, 14px, $white);
+        text-transform: uppercase;
+        //media request
+        @media #{$standart}{
+          margin: 10px;
+          padding: 15px 55px;
+        }
+        @media #{$mobile}{
+          font-size: 12px;
+          margin: 0 0 10px;
+          padding: 10px 50px;
+        }
+
+        &:hover {
+          text-decoration: none;
+          background-color: $color-light-blue;
+        }
+      }
+    }
+  }
+}
+
+// block clients
+.clients {
+  background-color: $client-bg;
+  padding: 7px 0 19px;
+  width: 100%;
+  //media request
+  @media #{$mobile}{
+    padding: 7px 0;
+  }
+
+  .wrapper-clients {
+    @include max-width(1280px);
+    @extend %display-flex;
+    a {
+      flex: 1 0 20%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

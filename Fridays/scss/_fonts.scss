@@ -1,0 +1,13 @@
+@import "_mixins/font-face";
+
+$font-path: "../fonts/";
+
+@include font-face("Montserrat-UltraLight", "Montserrat-UltraLight", $font-path);
+@include font-face("Montserrat-Light", "Montserrat-Light", $font-path);
+@include font-face("montserratbold", "montserratbold", $font-path);
+@include font-face("montserrat", "montserrat", $font-path);
+
+$montserrat: 'Montserrat-UltraLight', sans-serif;
+$montserratl: 'Montserrat-Light', sans-serif;
+$montserratb: 'montserratbold', sans-serif;
+$montserratr: 'montserrat', sans-serif;
