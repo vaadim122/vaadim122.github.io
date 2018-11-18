@@ -1,0 +1,10 @@
+@mixin text($font, $size, $color) {
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin max-width($whidth){
+  max-width: $whidth;
+  margin: 0 auto;
+}

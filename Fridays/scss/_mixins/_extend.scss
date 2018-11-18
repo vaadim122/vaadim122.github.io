@@ -1,0 +1,19 @@
+%display-flex{
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+}
+%button-slider{
+  z-index: 1;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  border: 3px solid $border-color;
+  background-color: $buron-slider;
+  &:before{
+    font-size: 28px;
+    color: $tab-border;
+    font-family: FontAwesome;
+  }
+}
