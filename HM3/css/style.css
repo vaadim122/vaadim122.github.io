@@ -1,0 +1,87 @@
+form{
+    margin-bottom: 10px;
+}
+input[type='text']{
+    border-radius: 20px;
+    box-shadow: none;
+    border: 1px solid grey;
+    padding: 5px 15px;
+    background-color: #03a9f41a;
+}
+input:focus {
+    outline: none;
+}
+input[type='text']::-webkit-input-placeholder{
+    color: #a3a3a3;
+    font-size: 12px;
+    font-style: italic;
+}
+input[type='submit']{
+    padding: 4px 0;
+    border-radius: 5px;
+    background-color: #373777;
+    color: white;
+    cursor: pointer;
+    width: 70px;
+}
+input[type='submit']:hover{
+    background-color: #2a2a55;
+}
+#spoiler input[type='submit']{
+    background-color: #2196f3;
+}
+#spoiler input[type='submit']:hover{
+    background-color: #1e6eb4;
+}
+button[type='close']{
+    font-size: 0;
+    background-color: #6c6c6cab;
+    padding: 2px 6px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+button[type='close']:before{
+    content: 'x';
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+button[type='close']:hover{
+    background-color: #6c6c6c;
+}
+p{
+    margin: 25px 0 5px;
+    text-decoration: underline;
+    color: #6c6c6ca3;
+    font-size: 14px;
+}
+tbody td img{
+    width: 40px;
+    height: 35px;
+}
+tbody td:nth-child(2){
+    padding: 0 15px;
+    font-family: Verdana;
+    font-size: 14px;
+}
+tbody td button{
+    padding: 3px 0;
+    border-radius: 10px;
+    background-color: #1f78c2;
+    color: white;
+    cursor: pointer;
+    width: 65px;
+    border: 1px solid #154f6f;
+}
+tbody td:nth-child(3) button:hover{
+    background-color: #1a5b96;
+}
+tbody td:nth-child(4) button {
+    background-color: #e02f2a;
+    border: 1px solid #9a1010;
+}
+tbody td:nth-child(4) button:hover{
+    background-color: #9a322f;
+}
