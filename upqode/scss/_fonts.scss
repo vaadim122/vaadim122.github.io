@@ -1,0 +1,13 @@
+@import "_mixins/font-face";
+
+$font-path: "../fonts/";
+
+@include font-face("latobold", "latobold", $font-path);
+@include font-face("latoregular", "latoregular", $font-path);
+@include font-face("latosemibold", "latosemibold", $font-path);
+@include font-face("latolight", "latolight", $font-path);
+
+$latobold: 'latobold', sans-serif;
+$latoregular: 'latoregular', sans-serif;
+$latosemibold: 'latosemibold', sans-serif;
+$latolight: 'latolight', sans-serif;

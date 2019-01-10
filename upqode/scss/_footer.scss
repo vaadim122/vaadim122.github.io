@@ -1,0 +1,284 @@
+//block footer
+
+footer {
+  padding-top: 30px;
+
+  //block header footer
+  .header-footer {
+    text-align: center;
+    margin-bottom: 77px;
+
+    //media request
+    @media #{$mobile}{
+      margin-bottom: 30px;
+    }
+    .title-block {
+      margin-bottom: 20px;
+    }
+    .down-header-title {
+      padding: 0 10px;
+    }
+  }
+
+  //block content footer
+  .footer-content {
+    position: relative;
+    padding: 98px 0;
+
+    //media request
+    @media #{$standart}{
+      padding: 60px 0;
+    }
+    @media #{$mobile}{
+      padding: 40px 0;
+    }
+
+    //map
+    .map {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    //form
+    .block-form {
+      @include max-width(945px);
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 83px 52px;
+      display: flex;
+      flex-wrap: wrap;
+
+      //media request
+      @media #{$standart}{
+        max-width: 650px;
+        padding: 40px 25px;
+      }
+      @media #{$mobile}{
+        max-width: 410px;
+        padding: 30px 20px 10px;
+      }
+      @media #{$sx-mobile}{
+        width: 90%;
+        padding: 20px 10px 20px;
+      }
+      form {
+        flex: 1 0;
+        max-width: 520px;
+        padding: 0 10px;
+
+        //media request
+        @media #{$mobile}{
+          flex: 1 0 100%;
+        }
+        > div {
+          padding: 0 5px;
+        }
+        .form-group {
+          margin: 0;
+        }
+        input, textarea {
+          background-color: transparent;
+          border-radius: 0;
+          border-color: $text-grey-footer;
+          @include text(Lato, 16px, $white);
+        }
+        input {
+          height: 50px;
+          padding: 0 20px;
+
+          //media request
+          @media #{$mobile}{
+            margin-bottom: 10px;
+            height: 40px;
+          }
+        }
+        textarea {
+          resize: none;
+          width: 100%;
+          height: 144px;
+          margin: 13px 0 10px;
+          padding: 10px 20px;
+
+          //media request
+          @media #{$mobile}{
+            margin-top: 0;
+          }
+        }
+        .check-like {
+          display: inline-block;
+          padding-top: 18px;
+
+          //media request
+          @media #{$mobile}{
+            padding-top: 8px;
+          }
+          label {
+            font-weight: 400;
+            padding-left: 35px;
+            position: relative;
+            @include text(Lato, 16px, $text-grey-footer);
+            &:before {
+              content: '';
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              width: 23px;
+              height: 23px;
+              border: 1px solid $text-grey-footer;
+              background-color: transparent;
+            }
+            input {
+              display: none;
+            }
+          }
+          .check {
+            &:before {
+              content: '\e013';
+              font-family: 'Glyphicons Halflings';
+              font-size: 12px;
+              text-align: center;
+              line-height: 21px;
+              color: $white;
+            }
+          }
+        }
+        .btn {
+          float: right;
+          border: none;
+          border-radius: 0;
+          background-color: $color-yellow;
+          margin-right: 7px;
+          padding: 14px 42px;
+          @include text(Lato, 16px, $text-grey-darck);
+
+          //media request
+          @media #{$mobile}{
+            padding: 8px 35px;
+          }
+          @media #{$sx-mobile}{
+            float: none;
+            display: block;
+            margin: 10px auto 0;
+          }
+          &:hover {
+            background-color: #ffc10a;
+          }
+        }
+      }
+      .contact {
+        flex: 1 0 30%;
+        margin-left: auto;
+        flex-grow: 0;
+        padding: 0 10px;
+        margin-top: -5px;
+
+        //media request
+        @media #{$mobile}{
+          flex: 1 0 100%;
+          margin-top: 0;
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+        div {
+          margin-bottom: 23px;
+
+          //media request
+          @media #{$mobile}{
+            flex: 1 0 45%;
+            margin: 15px 0;
+          }
+          @media #{$sx-mobile}{
+            flex: 1 0 100%;
+            margin: 15px 0 0;
+          }
+          span {
+            display: block;
+            line-height: 1.5;
+            @include text(Lato, 16px, $text-footer);
+
+            //media request
+            @media #{$standart}{
+              font-size: 14px;
+            }
+            @media #{$mobile}{
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //copyright
+  .copyright {
+    background-color: $bg-copyright;
+    width: 100%;
+    padding: 0 30px;
+
+    //media request
+    @media #{$standart}{
+      padding: 0 20px;
+    }
+    @media #{$mobile}{
+      padding: 0 15px;
+    }
+    @media #{$sx-mobile}{
+      text-align: center;
+    }
+    p {
+      display: inline-block;
+      @include text(Lato, 16px, $text-copyright);
+      margin: 0;
+      padding: 17px 0 22px;
+
+      //media request
+      @media #{$standart}{
+        font-size: 14px;
+        padding: 15px 0 15px;
+      }
+      @media #{$mobile}{
+        font-size: 13px;
+        padding: 13px 0 10px;
+      }
+    }
+    ul {
+      float: right;
+      padding: 0;
+      margin: 15px 0;
+
+      //media request
+      @media #{$standart}{
+        margin: 10px 0 0;
+      }
+      @media #{$sx-mobile}{
+        float: none;
+        display: inline-block;
+        margin: 0;
+      }
+      li {
+        float: left;
+        list-style: none;
+        margin-left: 22px;
+        a {
+          font-size: 22px;
+        }
+
+        //media request
+        @media #{$mobile}{
+          margin-left: 15px;
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

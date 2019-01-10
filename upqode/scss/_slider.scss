@@ -1,0 +1,196 @@
+@import "vars";
+@import "_mixins/mixin";
+@import "_mixins/extend";
+@import "media";
+
+//style container with tab and slider
+
+.right-block-slider {
+
+  //slider
+  .slider {
+    width: 100%;
+    height: 860px;
+    overflow: hidden;
+    position: relative;
+
+    //media request
+    @media #{$standart}{
+      height: 660px;
+    }
+    @media #{$table}{
+      height: 560px;
+    }
+    @media #{$mobile}{
+      height: 420px;
+    }
+    @media #{$sx-mobile}{
+      height: 360px;
+    }
+
+    //img in slider
+    .slider--item {
+      height: 860px;
+      background-position: center top;
+      background-size: cover;
+      width: 100%;
+      position: relative;
+
+      //media request
+      @media #{$standart}{
+        height: 660px;
+      }
+      @media #{$table}{
+        height: 560px;
+      }
+      @media #{$mobile}{
+        height: 420px;
+      }
+      @media #{$sx-mobile}{
+        height: 360px;
+      }
+      .bg-gradient {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: -moz-linear-gradient(161deg, rgb(75, 54, 142) 0%, rgb(84, 58, 160) 24%, rgb(93, 61, 178) 49%, rgb(107, 189, 240) 100%);
+        background-image: -webkit-linear-gradient(161deg, rgb(75, 54, 142) 0%, rgb(84, 58, 160) 24%, rgb(93, 61, 178) 49%, rgb(107, 189, 240) 100%);
+        background-image: -ms-linear-gradient(161deg, rgb(75, 54, 142) 0%, rgb(84, 58, 160) 24%, rgb(93, 61, 178) 49%, rgb(107, 189, 240) 100%);
+        opacity: 0.8;
+      }
+
+      //block header text
+      .textInSlider {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        padding: 10px 100px;
+        width: 100%;
+        margin-top: 35px;
+
+        //media request
+        @media #{$mobile}{
+          padding: 10px 80px;
+        }
+        @media #{$sx-mobile}{
+          padding: 10px 55px;
+        }
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 3.5px;
+          margin: 10px 0 30px;
+          @include text($latobold, 64px, $color-yellow);
+          span {
+            color: $white;
+          }
+
+          //media request
+          @media #{$standart}{
+            font-size: 50px;
+          }
+          @media #{$table}{
+            font-size: 36px;
+            margin: 10px 0 25px;
+          }
+          @media #{$mobile}{
+            font-size: 25px;
+            margin: 10px 0 20px;
+            letter-spacing: 3px;
+          }
+          @media #{$sx-mobile}{
+            font-size: 20px;
+            margin: 10px 0 15px;
+            letter-spacing: 2.5px;
+          }
+        }
+        p {
+          letter-spacing: 0.7px;
+          line-height: 1.875;
+          @include text(Lato, 16px, $white);
+          @include max-width(730px);
+
+          //media request
+          @media #{$table}{
+            font-size: 14px;
+            line-height: 1.5;
+          }
+          @media #{$mobile}{
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+          }
+          @media #{$sx-mobile}{
+            font-size: 12px;
+            letter-spacing: 0;
+          }
+        }
+      }
+
+    }
+
+    //slick
+    .slick-dots {
+      bottom: 34px;
+
+      //media request
+      @media #{$mobile}{
+        bottom: 20px;
+      }
+      @media #{$sx-mobile}{
+        bottom: 10px;
+      }
+      li {
+        width: 15px;
+        margin: 0;
+        button {
+          &:before {
+            font-size: 8px;
+            color: $white;
+            width: 15px;
+          }
+
+          //media request
+          @media #{$sx-mobile}{
+            &:before {
+              font-size: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    //button in slider
+    .slick-prev {
+      @extend %button-slider;
+      left: 30px;
+      text-align: center;
+      &:before {
+        content: "\f104";
+      }
+      //media request
+      @media #{$mobile}{
+        left: 20px;
+      }
+      @media #{$sx-mobile}{
+        left: 10px;
+      }
+    }
+    .slick-next {
+      @extend %button-slider;
+      right: 30px;
+      text-align: center;
+      &:before {
+        content: "\f105";
+      }
+      //media request
+      @media #{$mobile}{
+        right: 20px;
+      }
+      @media #{$sx-mobile}{
+        right: 10px;
+      }
+    }
+  }
+}

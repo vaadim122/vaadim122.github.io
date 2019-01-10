@@ -1,0 +1,61 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "header";
+@import "slider";
+@import "why-choose-us";
+@import "about-us";
+@import "footer";
+
+
+body{
+
+}
+
+.main-container{
+}
+
+// title in block
+.title-block{
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  @include text(Lato, 35px, $text-blue);
+  span {
+    color: black;
+  }
+
+  //media request
+  @media #{$table}{
+    font-size: 28px;
+  }
+  @media #{$mobile}{
+    font-size: 22px;
+  }
+  @media #{$sx-mobile}{
+    font-size: 18px;
+  }
+}
+
+//text down title
+.down-header-title{
+  letter-spacing: 0.6px;
+  line-height: 1.75;
+  @include text(Lato, 14px, $text-grey);
+
+  //media request
+  @media #{$mobile}{
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+  @media #{$sx-mobile}{
+    font-size: 12px;
+  }
+}
+
+@import "media"; // Всегда в конце
+
+
+

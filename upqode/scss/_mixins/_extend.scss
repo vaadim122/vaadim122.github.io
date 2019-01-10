@@ -1,0 +1,27 @@
+%display-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+%button-slider{
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 35px;
+  &:before{
+    font-size: 19px;
+    color: $white;
+    font-family: FontAwesome;
+  }
+  //media request
+  @media #{$mobile}{
+    width: 45px;
+    height: 45px;
+    margin-top: 30px;
+  }
+  @media #{$sx-mobile}{
+    width: 35px;
+    height: 35px;
+  }
+}
